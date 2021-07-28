@@ -2,12 +2,20 @@
  * @Author: 酱
  * @LastEditors: 酱
  * @Date: 2021-07-27 10:16:50
- * @LastEditTime: 2021-07-27 11:57:32
- * @Description: 
+ * @LastEditTime: 2021-07-28 22:00:45
+ * @Description:
  * @FilePath: \xia-admin\src\router\index.js
  */
 import { createRouter, createWebHashHistory } from 'vue-router'
-import Dashboard from '@/router/modules/dashboard.js'
+import Dashboard from '@/router/modules/dashboard'
+import Charts from '@/router/modules/charts'
+import Icon from '@/router/modules/icon'
+import Nav from '@/router/modules/nav'
+import Form from '@/router/modules/form'
+import Demo from '@/router/modules/demo'
+import Tool from '@/router/modules/tool'
+import Configs from '@/router/modules/configs'
+import Profile from '@/router/modules/profile'
 // 固定路由
 export const constantRoutes = [
   {
@@ -40,10 +48,18 @@ export const constantRoutes = [
 // 异步路由根据权限配置
 export const asyncRoutes = [
   Dashboard,
+  Charts,
+  Icon,
+  Nav,
+  Form,
+  Demo,
+  Tool,
+  Configs,
+  Profile,
   { path: '/:pathMatch(.*)', redirect: '/404', hidden: true }
 ]
 export function resetRouter() {
-    // const newRouter = createRouter()
+  // const newRouter = createRouter()
   // router.matcher = newRouter.matcher
 }
 const router = createRouter({

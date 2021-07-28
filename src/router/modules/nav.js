@@ -1,3 +1,11 @@
+/*
+ * @Author: 酱
+ * @LastEditors: 酱
+ * @Date: 2021-07-28 20:25:53
+ * @LastEditTime: 2021-07-28 21:52:31
+ * @Description:
+ * @FilePath: \xia-admin\src\router\modules\nav.js
+ */
 import layout from '@/layout/index.vue'
 // activeMenu 用来高亮导航的参数
 const Nav = {
@@ -5,17 +13,18 @@ const Nav = {
   name: 'Nav',
   component: layout,
   redirect: { path: '/nav/index' },
+  icon: 'xia xia-nav',
+  title: '导航',
   meta: {
-    title: '导航',
     roles: [1, 2]
   },
   children: [
     {
       path: 'index',
-      component: () => import('@/views/nav/index'),
+      component: () => import('@/views/nav/index.vue'),
+      title: '我的导航',
       meta: {
-        activeMenu: '/nav',
-        title: ''
+        activeMenu: '/nav'
       }
     }
   ]

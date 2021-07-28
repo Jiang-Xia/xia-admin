@@ -2,8 +2,8 @@
  * @Author: 酱
  * @LastEditors: 酱
  * @Date: 2021-07-27 09:55:23
- * @LastEditTime: 2021-07-27 16:27:41
- * @Description: 
+ * @LastEditTime: 2021-07-28 22:13:00
+ * @Description:
  * @FilePath: \xia-admin\src\main.js
  */
 import { createApp } from 'vue'
@@ -14,13 +14,32 @@ import './permission'
 import '@/mock/index'
 import App from './App.vue'
 import ElementPlus from 'element-plus'
-// import '@/styles/element-variables.scss'
+import '@/styles/element-variables.scss'
 // import 'element-plus/packages/theme-chalk/src/index.scss'
+import '@/assets/font/xia-icon/iconfont.css'
 
 const app = createApp(App)
 app.use(ElementPlus).use(store).use(router).mount('#app')
 
-import * as echarts from 'echarts';
+/* 自定义指令 */
+import directives from '@/directives'
+app.use(directives)
+/*
+  全局组件注册
+*/
+import SvgIcon from '@/components/SvgIcon/index.vue'
+// 自动注册图表组件
+import { componentfn } from '@/components/charts/index'
+componentfn(app)
+import BreadCrumb from '@/components/breadcrumb/index.vue'
+app.component('SvgIcon', SvgIcon)
+app.component('BreadCrumb', BreadCrumb)
+
+/* 第三方库 */
+import * as echarts from 'echarts'
+/* echart 加载主题 https://echarts.apache.org/zh/theme-builder.html */
+import echartsTheme from '@/utils/echartsTheme.json'
+echarts.registerTheme('walden', echartsTheme)
 /*
   常用方法挂载
 */
