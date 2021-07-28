@@ -2,11 +2,11 @@
  * @Author: 酱
  * @LastEditors: 酱
  * @Date: 2021-07-27 09:55:23
- * @LastEditTime: 2021-07-27 16:39:29
- * @Description: 
+ * @LastEditTime: 2021-07-28 18:06:02
+ * @Description:
  * @FilePath: \xia-admin\vite.config.js
  */
-import  { UserConfig, ConfigEnv } from 'vite'
+import { UserConfig, ConfigEnv } from 'vite'
 import { loadEnv } from 'vite'
 import { resolve } from 'path'
 import vue from '@vitejs/plugin-vue'
@@ -24,9 +24,9 @@ export default ({ command, mode }) => {
       alias: [
         {
           find: '@',
-          replacement: resolve(__dirname, './src'),
-        },
-      ],
+          replacement: resolve(__dirname, './src')
+        }
+      ]
     },
     plugins: [
       vue(),
@@ -38,16 +38,16 @@ export default ({ command, mode }) => {
             esModule: true,
             ensureStyleFile: true,
             resolveStyle: (name) => {
-              return `element-plus/lib/theme-chalk/${name}.css`;
+              return `element-plus/lib/theme-chalk/${name}.css`
             },
             resolveComponent: (name) => {
-              return `element-plus/lib/${name}`;
-            },
+              return `element-plus/lib/${name}`
+            }
           }]
       }),
       vueJsx({
         // options are passed on to @vue/babel-plugin-jsx
-      }),
+      })
     ],
     css: {
       preprocessorOptions: {
@@ -60,7 +60,7 @@ export default ({ command, mode }) => {
     server: {
       // open:true,
       disableHostCheck: true,
-      port: 5003,
+      port: 5008
       /* 使用代理 */
       // proxy: {
       //   '/proxy-api': { // 代理标识
@@ -78,6 +78,6 @@ export default ({ command, mode }) => {
       //     }
       //   }
       // }
-    },
+    }
   }
 }

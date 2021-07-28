@@ -1,13 +1,9 @@
 import { constantRoutes,asyncRoutes } from '@/router'
 // import store from '@/store'
 // import { convertRouter } from '@/utils/handleRoutes'
+import Layout from '@/layout/index.vue'
 import { getUserRoutes } from '@/api/common'
 
-/**
- * Use meta.role to determine if the current user has permission
- * @param roles
- * @param route
- */
 // function hasPermission(roles, route) {
 //   if (route.meta && route.meta.roles) {
 //     return roles.some(role => route.meta.roles.includes(role))
@@ -46,7 +42,7 @@ export function filterAsyncRoutes(routes) {
       },
       children: route.children || undefined
     }
-    tmp.title = route.title
+    tmp.title = route.title||route.meta?.title
     if (route.icon) {
       tmp.icon = route.icon
     }
@@ -97,8 +93,9 @@ const actions = {
   generateRoutes({ commit }, roles) {
     return new Promise(resolve => {
       getUserRoutes().then(res=>{
+        // res.data.routes
         let accessedRoutes = asyncRoutes
-        console.log('=================', accessedRoutes, '=================')
+        // console.log('=================', accessedRoutes, '=================')
         if (roles.includes(2)) {
           // 全部路由
           accessedRoutes = accessedRoutes

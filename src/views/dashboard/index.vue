@@ -1,33 +1,24 @@
 <template>
   <div class="dashboard-container">
-    <!-- <section v-for="(module,moduleIndex) in moduleData" :key="moduleIndex" class="section-container">
+    <section
+      v-for="(module,moduleIndex) in moduleData"
+      :key="moduleIndex"
+      class="section-container"
+    >
       <p class="module-title"><span class="marker-site" /> {{ module.name }}</p>
       <div
         v-for="(item,index) in module.imgList"
         :key="index"
         class="item-wrap"
       >
+        <!-- v-lazyload -->
         <img
-          v-lazyload
           class="img-item"
           :src="item"
           alt=""
         >
       </div>
-
-    </section> -->
-    <!--
-    <section>
-      <video
-        width="400"
-        height="300"
-        preload="auto"
-        src="./孟佳mv.mp4"
-        data-video="0"
-        autoplay="autoplay"
-        style="border:1px solid red"
-      />
-    </section> -->
+    </section>
   </div>
 </template>
 
