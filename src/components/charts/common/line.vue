@@ -207,7 +207,7 @@ const option = {
   }
   ]
 }
-import echarts from 'echarts'
+import * as echarts from 'echarts'
 import { onMounted } from 'vue'
 export default {
   name: 'Line',

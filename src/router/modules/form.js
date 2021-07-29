@@ -2,7 +2,7 @@
  * @Author: 酱
  * @LastEditors: 酱
  * @Date: 2021-07-28 20:25:53
- * @LastEditTime: 2021-07-28 22:04:20
+ * @LastEditTime: 2021-07-29 09:47:49
  * @Description:
  * @FilePath: \xia-admin\src\router\modules\form.js
  */
@@ -21,7 +21,7 @@ const Form = {
   children: [
     {
       path: 'index',
-      component: () => import('@/views/form/drag-control.vue'),
+      component: () => import('@/views/form/drag-control/index.vue'),
       title: '表单生成器',
       meta: {
         activeMenu: '/form/index'
@@ -29,7 +29,7 @@ const Form = {
     },
     {
       path: 'question',
-      component: () => import('@/views/form/question-type.vue'),
+      component: () => import('@/views/form/question-type/index.vue'),
       title: '题型生成器',
       meta: {
         activeMenu: '/form/question'

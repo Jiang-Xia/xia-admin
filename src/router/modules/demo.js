@@ -2,7 +2,7 @@
  * @Author: 酱
  * @LastEditors: 酱
  * @Date: 2021-07-28 20:25:53
- * @LastEditTime: 2021-07-28 22:04:13
+ * @LastEditTime: 2021-07-29 09:47:32
  * @Description:
  * @FilePath: \xia-admin\src\router\modules\demo.js
  */
@@ -21,7 +21,7 @@ const Demo = {
   children: [
     {
       path: 'theme',
-      component: () => import('@/views/demo/theme.vue'),
+      component: () => import('@/views/demo/theme/index.vue'),
       title: '换肤',
       meta: {
         activeMenu: '/demo/theme'

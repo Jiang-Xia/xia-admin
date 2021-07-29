@@ -1,3 +1,11 @@
+<!--
+ * @Author: 酱
+ * @LastEditors: 酱
+ * @Date: 2021-07-29 09:18:17
+ * @LastEditTime: 2021-07-29 10:00:58
+ * @Description:
+ * @FilePath: \xia-admin\src\components\charts\common\water.vue
+-->
 <template>
   <div id="water-wrap" ref="water-wrap" class="wrap__inner">
     1
@@ -14,7 +22,7 @@ const option = {
   }]
 }
 import 'echarts-liquidfill'
-import echarts from 'echarts'
+import * as echarts from 'echarts'
 import { onMounted } from 'vue'
 export default {
   name: 'Water',

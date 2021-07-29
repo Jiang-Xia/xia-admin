@@ -12,6 +12,7 @@
     "axios": "^0.21.1",
     "dayjs": "^1.10.6",
     "echarts": "^5.1.2",
+    "echarts-liquidfill": "^3.0.0",
     "emojilib": "^3.0.4",
     "js-base64": "^3.6.1",
     "js-cookie": "^3.0.0",
@@ -19,6 +20,7 @@
     "path-to-regexp": "^6.2.0",
     "vue": "^3.0.5",
     "vue-router": "^4.0.10",
+    "vuedraggable": "^2.24.3",
     "vuex": "^4.0.2"
   },
   "devDependencies": {

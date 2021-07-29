@@ -2,7 +2,7 @@
  * @Author: 酱
  * @LastEditors: 酱
  * @Date: 2021-07-27 09:55:23
- * @LastEditTime: 2021-07-28 22:13:00
+ * @LastEditTime: 2021-07-29 10:11:15
  * @Description:
  * @FilePath: \xia-admin\src\main.js
  */
@@ -29,8 +29,8 @@ app.use(directives)
 */
 import SvgIcon from '@/components/SvgIcon/index.vue'
 // 自动注册图表组件
-import { componentfn } from '@/components/charts/index'
-componentfn(app)
+import { asyncComponent } from '@/components/charts/index'
+asyncComponent(app)
 import BreadCrumb from '@/components/breadcrumb/index.vue'
 app.component('SvgIcon', SvgIcon)
 app.component('BreadCrumb', BreadCrumb)
