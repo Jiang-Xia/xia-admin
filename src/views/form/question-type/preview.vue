@@ -15,7 +15,7 @@
   </el-dialog>
 </template>
 <script>
-import PreviewModel from './question-components/preview-model'
+import PreviewModel from './question-components/preview-model.vue'
 import FieldTemp from './睡眠呼吸监测.json'
 export default {
   components: {
@@ -56,7 +56,6 @@ export default {
 }
 </script>
 <style lang="scss">
-@import "~@/styles/scss/_mixins";
 .xia-dialog-preview{
   .el-dialog__body{
     height: 70vh;

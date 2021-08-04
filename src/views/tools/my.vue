@@ -27,7 +27,7 @@
 <script>
 import { useStore } from 'vuex'
 import { useRoute } from 'vue-router'
-import { computed, ref, onCreated, onMounted } from 'vue'
+import { computed, ref, onMounted } from 'vue'
 import { Base64 } from 'js-base64'
 import axios from 'axios'
 export default {

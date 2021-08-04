@@ -2,9 +2,9 @@
  * @Author: 酱
  * @LastEditors: 酱
  * @Date: 2021-07-02 09:38:08
- * @LastEditTime: 2021-07-14 16:23:59
+ * @LastEditTime: 2021-08-03 17:44:45
  * @Description:
- * @FilePath: \xia-vue3-element\src\views\demo\index.vue
+ * @FilePath: \xia-admin\src\views\demo\index.vue
 -->
 <template>
   <div class="demo-container">
@@ -29,10 +29,10 @@
 </template>
 
 <script>
-import ImageHotArea from './components/image-hot-area'
-import Theme from './components/theme'
-import RouterList from './components/router-list'
-import Directive from './components/directive'
+import ImageHotArea from './components/image-hot-area.vue'
+import Theme from './components/theme.vue'
+import RouterList from './components/router-list.vue'
+import Directive from './components/directive.vue'
 
 export default {
   components: {

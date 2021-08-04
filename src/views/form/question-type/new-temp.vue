@@ -1,3 +1,11 @@
+<!--
+ * @Author: 酱
+ * @LastEditors: 酱
+ * @Date: 2021-07-29 09:18:17
+ * @LastEditTime: 2021-08-03 17:40:51
+ * @Description:
+ * @FilePath: \xia-admin\src\views\form\question-type\new-temp.vue
+-->
 <template>
   <div class="new-temp-container">
     <div class="temp-item">

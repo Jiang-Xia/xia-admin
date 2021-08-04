@@ -138,7 +138,6 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-@import "~@/styles/scss/_mixins";
 @import "../common.scss";
 .form-container{
   .component-list{

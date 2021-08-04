@@ -1,3 +1,11 @@
+<!--
+ * @Author: 酱
+ * @LastEditors: 酱
+ * @Date: 2021-07-29 09:18:17
+ * @LastEditTime: 2021-08-03 17:42:53
+ * @Description:
+ * @FilePath: \xia-admin\src\views\form\question-type\components\dim-model.vue
+-->
 <template>
   <div class="dim-container clearfix">
 
@@ -35,11 +43,11 @@
 </template>
 
 <script>
-import DimInput from './dim-input'
-import DimCheckbox from './dim-checkbox'
-import DimRadio from './dim-radio'
-import DimSelect from './dim-select'
-import DimTextarea from './dim-textarea'
+import DimInput from './dim-input.vue'
+import DimCheckbox from './dim-checkbox.vue'
+import DimRadio from './dim-radio.vue'
+import DimSelect from './dim-select.vue'
+import DimTextarea from './dim-textarea.vue'
 
 export default {
   components: {

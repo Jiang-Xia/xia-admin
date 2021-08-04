@@ -13,7 +13,6 @@
     "dayjs": "^1.10.6",
     "echarts": "^5.1.2",
     "echarts-liquidfill": "^3.0.0",
-    "emojilib": "^3.0.4",
     "js-base64": "^3.6.1",
     "js-cookie": "^3.0.0",
     "nprogress": "^0.2.0",

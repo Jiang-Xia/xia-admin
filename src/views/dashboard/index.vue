@@ -11,8 +11,8 @@
         :key="index"
         class="item-wrap"
       >
-        <!-- v-lazyload -->
         <img
+          v-lazyload
           class="img-item"
           :src="item"
           alt=""

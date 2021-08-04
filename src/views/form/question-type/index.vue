@@ -83,9 +83,9 @@
 
 <script>
 import draggable from 'vuedraggable'
-import addQuestion from './new-temp'
-import DimModel from './question-components/question-model'
-import Preview from './preview'
+import addQuestion from './new-temp.vue'
+import DimModel from './question-components/question-model.vue'
+import Preview from './preview.vue'
 import { ref, reactive } from 'vue'
 // const idGlobal = 4
 const controlList = [
@@ -218,7 +218,6 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-@import "~@/styles/scss/_mixins";
 @import "../common.scss";
 .form-container{
   .component-list{

@@ -4,6 +4,14 @@ import { constantRoutes,asyncRoutes } from '@/router'
 import Layout from '@/layout/index.vue'
 import { getUserRoutes } from '@/api/common'
 
+// 同步获取到文件路径和文件名级信息
+function getComponents() {
+  const components = import.meta.globEager('../../views/**/*.vue')
+  return components
+}
+// 获取到开发views目录下的所有组件,有问题components目录下没有自动导入
+// const Modules = getComponents()
+
 // function hasPermission(roles, route) {
 //   if (route.meta && route.meta.roles) {
 //     return roles.some(role => route.meta.roles.includes(role))
@@ -22,6 +30,7 @@ export function filterAsyncRoutes(routes) {
   routes.forEach((route = {}) => {
     // console.log(route, route.component, 1111111111111111111111111)
     const component = route.component
+    // const asyncComponent = Modules['../../views'+component+'.vue']
     /*
       动态路由使用注意事项
       https://next.router.vuejs.org/zh/guide/advanced/lazy-loading.html
@@ -34,6 +43,8 @@ export function filterAsyncRoutes(routes) {
       * 两种方法导入都可以，import方法eslint报错  require不报错
       */
       component: component,
+      // component: component.includes('layout') ? 
+      // Layout : ()=>asyncComponent,
       redirect: route.redirect || undefined,
       hidden: !!route.hidden,
       name: route.name,

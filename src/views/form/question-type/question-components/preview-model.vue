@@ -55,13 +55,13 @@
 </template>
 
 <script>
-import LongText from './long-text'
-import ShortText from './short-text'
-import MultipleChoice from './multiple-choice'
-import MultipleDropdown from './multiple-dropdown'
-import SingleChoice from './single-choice'
-import SingleDropdown from './single-dropdown'
-import Desp from './desp'
+import LongText from './long-text.vue'
+import ShortText from './short-text.vue'
+import MultipleChoice from './multiple-choice.vue'
+import MultipleDropdown from './multiple-dropdown.vue'
+import SingleChoice from './single-choice.vue'
+import SingleDropdown from './single-dropdown.vue'
+import Desp from './desp.vue'
 export default {
   components: {
     ShortText,
@@ -117,7 +117,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import "~@/styles/scss/_mixins";
 .dim-container{
   border-radius: 5px;
   border:1px solid #ccc;

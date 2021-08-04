@@ -1,35 +1,26 @@
+<!--
+ * @Author: 酱
+ * @LastEditors: 酱
+ * @Date: 2021-07-29 09:18:17
+ * @LastEditTime: 2021-08-03 16:42:24
+ * @Description:
+ * @FilePath: \xia-admin\src\views\icon\index.vue
+-->
 <template>
   <div class="icons-container">
     <!-- emoji -->
     <section class="section-container">
       <svg-icon icon-class="approval-config" />
-      <span
-        v-for="(v,i) in emojis"
-        :key="i"
-        style="padding:0.5rem;"
-      >{{ v }}</span>
-      <span
-        v-for="(v,i) in emojis2"
-        :key="i"
-        style="padding:0.5rem;"
-      >{{ lib[v].char }}</span>
     </section>
   </div>
 </template>
 
 <script>
-import emoji from 'emojilib'
 export default {
+  components: {
+  },
   setup() {
-    const emojis = emoji.fitzpatrick_scale_modifiers
-    const emojis2 = emoji.ordered
-    const lib = emoji.lib
-    emoji.length = 30
-    emojis2.length = 20
     return {
-      emojis,
-      emojis2,
-      lib
     }
   }
 }
