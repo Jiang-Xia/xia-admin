@@ -17,6 +17,7 @@
     "js-cookie": "^3.0.0",
     "nprogress": "^0.2.0",
     "path-to-regexp": "^6.2.0",
+    "throttle-debounce": "^3.0.1",
     "vue": "^3.0.5",
     "vue-router": "^4.0.10",
     "vuedraggable": "^2.24.3",

@@ -2,7 +2,7 @@
  * @Author: 酱
  * @LastEditors: 酱
  * @Date: 2021-07-27 10:16:50
- * @LastEditTime: 2021-07-28 22:00:45
+ * @LastEditTime: 2021-08-11 17:12:53
  * @Description:
  * @FilePath: \xia-admin\src\router\index.js
  */
@@ -13,6 +13,7 @@ import Icon from '@/router/modules/icon'
 import Nav from '@/router/modules/nav'
 import Form from '@/router/modules/form'
 import Demo from '@/router/modules/demo'
+import Component from '@/router/modules/component'
 import Tool from '@/router/modules/tool'
 import Configs from '@/router/modules/configs'
 import Profile from '@/router/modules/profile'
@@ -49,10 +50,11 @@ export const constantRoutes = [
 export const asyncRoutes = [
   Dashboard,
   Charts,
+  Demo,
+  Component,
   Icon,
   Nav,
   Form,
-  Demo,
   Tool,
   Configs,
   Profile,
