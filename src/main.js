@@ -2,11 +2,7 @@
  * @Author: 酱
  * @LastEditors: 酱
  * @Date: 2021-07-27 09:55:23
-<<<<<<< Updated upstream
- * @LastEditTime: 2021-09-08 23:18:05
-=======
- * @LastEditTime: 2021-09-08 23:12:22
->>>>>>> Stashed changes
+ * @LastEditTime: 2021-09-08 23:34:30
  * @Description:
  * @FilePath: \xia-admin\src\main.js
  */
