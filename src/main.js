@@ -2,10 +2,11 @@
  * @Author: 酱
  * @LastEditors: 酱
  * @Date: 2021-07-27 09:55:23
- * @LastEditTime: 2021-08-03 15:56:32
+ * @LastEditTime: 2021-09-08 23:18:05
  * @Description:
  * @FilePath: \xia-admin\src\main.js
  */
+// 熟悉github desktop
 import { createApp } from 'vue'
 import router from './router'
 import store from './store'
