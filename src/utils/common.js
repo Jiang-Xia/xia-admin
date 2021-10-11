@@ -1,4 +1,20 @@
 /*
+ * @Author: 酱
+ * @LastEditors: 酱
+ * @Date: 2021-09-04 12:15:54
+ * @LastEditTime: 2021-09-29 10:27:36
+ * @Description:
+ * @FilePath: \xia-admin\src\utils\common.js
+ */
+/*
+ * @Author: 酱
+ * @LastEditors: 酱
+ * @Date: 2021-09-04 12:15:54
+ * @LastEditTime: 2021-09-29 10:27:31
+ * @Description:
+ * @FilePath: \xia-admin\src\utils\common.js
+ */
+/*
  * 公共方法 工具函数
  *
 */

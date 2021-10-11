@@ -2,14 +2,14 @@
  * @Author: 酱
  * @LastEditors: 酱
  * @Date: 2021-07-29 09:26:20
- * @LastEditTime: 2021-07-29 09:42:59
+ * @LastEditTime: 2021-10-11 15:59:21
  * @Description: 
  * @FilePath: \xia-admin\README.MD
 -->
 # VUE3 +  Vite
 
 个人后台系统
-
+- [Admin - 在线预览](https://jiang-xia.gitee.io/#/dashboard/index)
 - [Admin - 在线预览](https://gitee.com/jiang-xia/Jiang-Xia.github.io)
 
 - [github - 源代码](https://github.com/Jiang-Xia/xia-admin)
