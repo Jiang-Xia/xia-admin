@@ -10,6 +10,7 @@
 import ThemePicker from '@/components/ThemePicker/index.vue'
 
 export default {
+  name: 'Theme',
   components: { ThemePicker },
   data() {
     return {

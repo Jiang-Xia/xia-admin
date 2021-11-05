@@ -2,7 +2,7 @@
  * @Author: 酱
  * @LastEditors: 酱
  * @Date: 2021-07-05 10:46:31
- * @LastEditTime: 2021-08-11 17:16:56
+ * @LastEditTime: 2021-10-20 14:49:58
  * @Description: 自定义组件
  * @FilePath: \xia-admin\src\views\component\element\components\drag-select.vue
 -->
@@ -37,30 +37,44 @@
   任何未声明 emits 的事件监听器都会被算入组件的 $attrs 并绑定在组件的根节点上。
 */
 import ElDragSelect from '@/components/el-drag-select/index.vue'
+import { reactive, ref } from '@vue/reactivity'
+// reactive 只能把对象类型变为响应式，数组的话还是需要使用ref
 export default {
   name: 'DragSelect',
   components: {
     ElDragSelect
   },
+  setup() {
+    let options = [{
+      value: 'Apple',
+      label: 'Apple'
+    }, {
+      value: 'Banana',
+      label: 'Banana'
+    }, {
+      value: 'Orange',
+      label: 'Orange'
+    }, {
+      value: 'Pear',
+      label: 'Pear'
+    }, {
+      value: 'Strawberry',
+      label: 'Strawberry'
+    }]
+    options = ref(options)
+    const value = ref(['Apple', 'Banana', 'Orange'])
+    return {
+      options,
+      value
+    }
+  },
   data() {
     return {
-      value: ['Apple', 'Banana', 'Orange'],
-      options: [{
-        value: 'Apple',
-        label: 'Apple'
-      }, {
-        value: 'Banana',
-        label: 'Banana'
-      }, {
-        value: 'Orange',
-        label: 'Orange'
-      }, {
-        value: 'Pear',
-        label: 'Pear'
-      }, {
-        value: 'Strawberry',
-        label: 'Strawberry'
-      }]
+    }
+  },
+  watch: {
+    value(n) {
+      console.log(n)
     }
   },
   mounted() {
@@ -68,6 +82,7 @@ export default {
   },
   methods: {
     changechange(n) {
+      console.log(this.value)
       this.$message.success('修改成功')
     }
   }

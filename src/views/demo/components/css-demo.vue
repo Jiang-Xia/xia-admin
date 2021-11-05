@@ -2,7 +2,7 @@
  * @Author: 酱
  * @LastEditors: 酱
  * @Date: 2021-07-05 10:46:31
- * @LastEditTime: 2021-08-11 19:56:23
+ * @LastEditTime: 2021-10-21 09:21:48
  * @Description:
  * @FilePath: \xia-admin\src\views\demo\components\css-demo.vue
 -->
@@ -23,6 +23,7 @@
 </template>
 <script>
 export default {
+  name: 'CssDemo',
   data() {
     return {
     }

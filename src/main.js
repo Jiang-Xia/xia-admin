@@ -2,7 +2,7 @@
  * @Author: 酱
  * @LastEditors: 酱
  * @Date: 2021-07-27 09:55:23
- * @LastEditTime: 2021-09-08 23:34:30
+ * @LastEditTime: 2021-10-22 16:03:19
  * @Description:
  * @FilePath: \xia-admin\src\main.js
  */
@@ -15,13 +15,13 @@ import './permission'
 import '@/mock/index'
 import App from './App.vue'
 import ElementPlus from 'element-plus'
+import Mock from 'mockjs'
 import '@/styles/element-variables.scss'
 // import 'element-plus/packages/theme-chalk/src/index.scss'
 import '@/assets/font/xia-icon/iconfont.css'
 
 const app = createApp(App)
 app.use(ElementPlus).use(store).use(router).mount('#app')
-
 /* 自定义指令 */
 import directives from '@/directives'
 app.use(directives)
@@ -54,4 +54,8 @@ globalProperties.devtools = false
 globalProperties.$getToken = getToken
 globalProperties.$axios = axios
 globalProperties.$echarts = echarts
+if(process.env !== "production"){
+  const Random = Mock.Random
+  globalProperties.$Random = Random
+}
 export default app

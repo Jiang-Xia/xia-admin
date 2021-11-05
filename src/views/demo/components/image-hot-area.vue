@@ -3,6 +3,11 @@
     <!-- emoji -->
     <div class="section-container">
       <img :src="barImg" alt="" usemap="#mymap" width="640" height="82">
+      <div v-show="color">
+        你点击了
+        <strong>{{ color }}</strong>
+        区域
+      </div>
       <map id="mymap" name="mymap">
         <area
           class="my-area"
@@ -52,7 +57,7 @@
           nohref="#rect"
           alt="矩形"
           title="矩形"
-          @click="clickMMHandle(1)"
+          @click="clickMMHandle('矩形')"
         >
         <area
           shape="circle"
@@ -61,7 +66,7 @@
           nohref="#circle"
           alt="圆形"
           title="圆形"
-          @click="clickMMHandle(2)"
+          @click="clickMMHandle('圆形')"
         >
         <area
           shape="poly"
@@ -70,24 +75,37 @@
           nohref="#poly"
           alt="多边形"
           title="多边形"
-          @click="clickMMHandle(3)"
+          @click="clickMMHandle('多边形')"
         >
       </map>
+      <div v-show="shape">
+        你点击了
+        <strong>{{ shape }}</strong>
+        区域
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import { ref } from '@vue/reactivity'
 import barImg from './img/条形cut.jpg'
 export default {
+  name: 'ImageHotArea',
   setup() {
+    const color = ref('')
+    const shape = ref('')
     return {
       barImg,
+      color,
+      shape,
       clickAreaHandle: function(num) {
-        console.log(`==${num}==`)
+        color.value = num
+        // console.log(`==${num}==`)
       },
-      clickMMHandle: function(num) {
-        console.log(`==${num}==`)
+      clickMMHandle: function(str) {
+        shape.value = str
+        // console.log(`==${num}==`)
       }
     }
   }

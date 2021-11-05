@@ -1,6 +1,6 @@
 <!--
  * @Author: 江夏
- * @LastEditors: 江夏
+ * @LastEditors: 酱
 -->
 <template>
   <div class="long-list-container">
@@ -13,6 +13,7 @@
 
 <script>
 export default {
+  name: 'RouterList',
   components: {
   },
   data() {

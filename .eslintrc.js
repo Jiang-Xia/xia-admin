@@ -52,7 +52,7 @@ module.exports = {
     }],
     'vue/singleline-html-element-content-newline': 'off',
     // 允许多个根元素
-    'vue/multiline-html-element-content-newline': 'off',
+    'vue/multiline-html-element-content-newline': 'always',
     'vue/name-property-casing': ['error', 'PascalCase'],
     'vue/no-v-html': 'off',
     'accessor-pairs': 2,

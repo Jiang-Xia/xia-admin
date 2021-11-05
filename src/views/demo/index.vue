@@ -2,7 +2,7 @@
  * @Author: 酱
  * @LastEditors: 酱
  * @Date: 2021-07-02 09:38:08
- * @LastEditTime: 2021-08-11 19:55:55
+ * @LastEditTime: 2021-10-21 09:26:42
  * @Description:
  * @FilePath: \xia-admin\src\views\demo\index.vue
 -->
@@ -31,6 +31,9 @@
       <el-tab-pane label="自定义指令" name="5">
         <Directive v-if="activeName==='5'" />
       </el-tab-pane>
+      <el-tab-pane label="组件通信" name="6">
+        <component-communicate v-if="activeName==='6'" />
+      </el-tab-pane>
       <el-tab-pane label="其他" name="7">
         7
       </el-tab-pane>
@@ -45,6 +48,7 @@ import RouterList from './components/router-list.vue'
 import Directive from './components/directive.vue'
 import CssDemo from './components/css-demo.vue'
 import JsDemo from './components/js-demo.vue'
+import ComponentCommunicate from './components/component-communicate/index.vue'
 
 export default {
   components: {
@@ -53,7 +57,8 @@ export default {
     RouterList,
     Directive,
     CssDemo,
-    JsDemo
+    JsDemo,
+    ComponentCommunicate
   },
   setup() {
     return {
