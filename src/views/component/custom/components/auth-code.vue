@@ -8,7 +8,7 @@
 -->
 <template>
   <div class="auth-code-container">
-    <AuthCode ref="AuthCode" />
+    <AuthCode ref="AuthCode" v-if="show"/>
     <el-button size="small" type="text" @click="createCodeHandle">看不清？重新生成</el-button>
     <div style="margin-top: 15px">
       <el-input v-model="writeCode" size="small" placeholder="请输入图片中的验证码">
@@ -29,12 +29,14 @@ export default {
   data() {
     return {
       authCode: '',
-      writeCode: ''
+      writeCode: '',
+      show: false
     }
   },
   mounted() {
-    this.authCode = this.$refs.AuthCode.authCode
-    console.log(this.authCode)
+    setTimeout(()=>{
+      this.show = true
+    },2000)
   },
   methods: {
     createCodeHandle() {

@@ -1,11 +1,3 @@
-<!--
- * @Author: 酱
- * @LastEditors: 酱
- * @Date: 2021-07-15 10:10:14
- * @LastEditTime: 2021-07-15 11:27:58
- * @Description:
- * @FilePath: \xia-vue3-element\src\components\auth-code\index.vue
--->
 <template>
   <div
     class="xia-authcode"
@@ -14,7 +6,7 @@
       width:isNaN(parseInt(width))?width:width+'px'
     }"
   >
-    <canvas ref="authCode" class="xia-authcode__content" />
+    <canvas ref="authCode" class="xia-authcode__content"/>
   </div>
 </template>
 
@@ -70,8 +62,8 @@ export default {
       // 获取到canvas的对象，演员
       const context = canvas.getContext('2d')// 获取到canvas画图的环境，演员表演的舞台
       // 需要重新设置width和height，不然画内容的时候width和height不会继承的
-      canvas.width = canvas_width
-      canvas.height = canvas_height
+      canvas.width = canvas_width|| this.width
+      canvas.height = canvas_height|| this.height
       const sCode = 'a,b,c,d,e,f,g,h,i,j,k,m,n,p,q,r,s,t,u,v,w,x,y,z,A,B,C,E,F,G,H,J,K,L,M,N,P,Q,R,S,T,W,X,Y,Z,1,2,3,4,5,6,7,8,9,0'
       const aCode = sCode.split(',')
 
@@ -108,6 +100,7 @@ export default {
         context.moveTo(Math.random() * canvas_width, Math.random() * canvas_height)
         context.lineTo(Math.random() * canvas_width, Math.random() * canvas_height)
         context.stroke()
+        console.log('context======>', context)
       }
       // 验证码上显示小点
       for (let i = 0; i <= 30; i++) {
